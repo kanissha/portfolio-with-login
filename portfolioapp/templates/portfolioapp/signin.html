@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+{% load static %}
+
+<html>
+<head>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Login Page</title>
+
+<link rel="stylesheet" type="text/css" href="{% static 'css/login.css' %}" >
+
+        
+</head>
+{% load static %} <body id="bg" style="background-image: url('{% static 'css/p_images/background1.jpg' %}');">  
+
+<br><br><br><br>
+
+
+
+  <form method="post" action="/signin" >
+
+  <div class="login-form">
+    {% csrf_token %}
+
+    <p>User name</p>
+    <input type="text" placeholder="Enter Username" name="username" id="username" required>
+    <p>Password</p>
+    <input type="password" placeholder="Enter Password" name="pass1" id="password"  required>
+    
+    <button type="submit" class="btn btn-primary">Log In</button>
+    
+    
+  </div>
+</form>
+
+
+</body>
+</html>
